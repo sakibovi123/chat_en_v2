@@ -38,8 +38,33 @@ if( currentStep === 1 ) {
         if( buttonValue === "Yes" ) {
             $("#user-response-1 > p").eq(0).removeClass("hidden")
             $("#user-response-1 > p").eq(0).text(buttonValue)
+            
+            $("#step-1 > div").addClass("hidden")
+            setTimeout(() => {
+                $("#step-1-yes-response > p").eq(0).removeClass("hidden")
+            }, 1200)
+
+            setTimeout(() => {
+                $("#step-1-yes-response > p").eq(1).removeClass("hidden")
+            }, 1500)
+
+            setTimeout(() => {
+                $("#step-1-yes-response > p").eq(2).removeClass("hidden")
+            }, 2000)
+            
+
         } else {
+            $("#user-response-1 > p").eq(0).removeClass("hidden")
             $("#user-response-1 > p").eq(0).text("No")
+            
+
+            $("#step-1 > div").addClass("hidden")
+
+            currentStep += 1
+
+            if( currentStep === 2 ) {
+                
+            }
         }
         
     })
