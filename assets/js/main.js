@@ -18,8 +18,17 @@ var currentStep = 1
 var buttonValue = ""
 // step 1
 if( currentStep === 1 ) {
+
+    setTimeout(()=>{
+        $("#step-1 > div").eq(0).removeClass("hidden")
+        setTimeout(()=> {
+            $("#step-1 > div").eq(0).addClass("hidden")
+        },600)
+    }, 400)
+
     setTimeout(() => {
         $("#step-1 > p:first").removeClass("hidden")
+        
         setTimeout(()=> {
             $("#step-1 > p").eq(1).removeClass("hidden")
         }, 1200)
@@ -28,9 +37,9 @@ if( currentStep === 1 ) {
         }, 1800)
 
         setTimeout(() => {
-            $("#step-1 > div").removeClass("hidden")
+            $("#step-1 > div").eq(1).removeClass("hidden")
         }, 2500)
-    }, 800)
+    }, 1200)
 
     $("#step-1 > div > button").click(function () {
         buttonValue = $(this).val()
@@ -62,21 +71,90 @@ if( currentStep === 1 ) {
 
             currentStep += 1
 
-            if( currentStep === 2 ) {
+            setTimeout(()=> {
+                $("#step-1-no-response > p").eq(0).removeClass("hidden")
+                setTimeout(()=> {
+                    $("#step-1-no-response > p").eq(1).removeClass("hidden")
+                }, 1300)
+                setTimeout(()=> {
+                    $("#step-1-no-response > div").removeClass("hidden")
+                }, 1400)
+            }, 1200)
+
+
+
+           
+        }
+
+        $("#step-1-no-response > div > button").click(function () {
+            buttonValue2 = $(this).val()
+
+            if( buttonValue2 == "Yes" )
+            {
+                $("#user-response-2 > p").eq(0).removeClass("hidden")
+                $("#user-response-2 > p").eq(0).text("Yes")
+
+                $("#step-1-no-response > div").addClass("hidden")
+
+                setTimeout(() => {
+                    $("#step-2-yes-response > p").removeClass("hidden")
+                    setTimeout(()=>{
+                        $("#step-2-yes-response > div").removeClass("hidden")
+                    }, 1200)
+                }, 800)
+            }
+
+            else {
+                $("#user-response-2 > p").eq(0).removeClass("hidden")
+                $("#user-response-2 > p").eq(0).text("No")
+
+                $("#step-1-no-response > div").addClass("hidden")
+                setTimeout(()=>{
+                    $("#user-choose-50-no > p").eq(0).removeClass("hidden")
+                        setTimeout(()=>{
+                            $("#user-choose-50-no > p").eq(1).removeClass("hidden")
+                        }, 1200)
+                }, 800)
+                
                 
             }
-        }
+        })
+
+        $("#step-2-yes-response > div > button").click(function() {
+            buttonVal3 = $(this).val()
+
+            if( buttonVal3 === "Yes" ) {
+                $("#step-2-yes-response > div").addClass("hidden")
+
+                $("#user-response-3 > p").removeClass("hidden")
+                $("#user-response-3 > p").text("Yes")
+
+                setTimeout(()=>{
+                    $("#step-3-yes-response > p").eq(0).removeClass("hidden")
+                    setTimeout(()=>{
+                        $("#step-3-yes-response > p").eq(1).removeClass("hidden")
+                        setTimeout(()=>{
+                            $("#step-3-yes-response > p").eq(2).removeClass("hidden")
+                        })
+                    }, 1000)
+                }, 800)
+            }
+            else {
+                $("#step-2-yes-response > div").addClass("hidden")
+                $("#user-response-3 > p").removeClass("hidden")
+                $("#user-response-3 > p").text("No")
+
+                setTimeout(()=>{
+                    $("#step-3-no-response > p").eq(0).removeClass("hidden")
+                    setTimeout(()=> {
+                        $("#step-3-no-response > p").eq(1).removeClass("hidden")
+                        setTimeout(()=> {
+                            $("#step-3-no-response > p").eq(2).removeClass("hidden")
+                        }, 1200)
+                    }, 1000)
+                }, 800)
+            }
+        })
         
     })
-    
-
-    // $(document).ready(function() {
-    //     $('#step-1 > div > button').click(function() {
-    //         var buttonValue = $(this).val();
-    //         console.log(buttonValue);
-    //     });
-    // });
-    
-
-
 }

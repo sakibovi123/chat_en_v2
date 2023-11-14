@@ -26,13 +26,17 @@
 
         <!-- automated message step 1 -->
         <div id="step-1" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2">
-            <!-- <div class="spinner hidden">
-                <div class="bounce1"></div>
-                <div class="bounce2"></div>
-                <div class="bounce3"></div>
-            </div> -->
-
-            <p class="bg-gray-200 p-3 rounded hidden font-normal">Hi There 👋</p>
+            
+            
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                <div id="spinner-1" class="spinner p-3 bg-gray-200 rounded hidden font-normal">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                
+                Hi There 👋
+            </p>
             <p class="bg-gray-200 p-3 rounded hidden font-normal">I'm Evelyn. I'm going to help you to get your debt removed</p>
             <p class="bg-gray-200 p-3 rounded hidden font-normal">In order to help you I need to know if you have more than $10,000 in debt?</p>
             <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
@@ -64,6 +68,102 @@
         <!-- user response == yes ends -->
 
         <!-- user reply 1 ends (yes) -->
+
+        <!-- if user reply no on step 1 -->
+        <div id="step-1-no-response" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">Okay, let me ask you two more quick qustions.</p>
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                Do you make less than $50,000 a year? Press Yes or No.
+            </p>
+            
+            <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="Yes">Yes</button>
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="No">No</button>
+            </div>
+        </div>
+        <!-- if user reply no on step 1 ends -->
+
+        <!-- user reply 2 if yes -->
+        <div id="user-response-2" class="container mx-auto  w-[20%] flex items-center justify-end my-4">
+            <p class="bg-blue-600 p-3 rounded hidden text-white"></p>
+        </div>
+        <!-- user reply 2 if yes ends -->
+
+        <!-- if user replies yes it will ask are you medicare -->
+        <div id="step-2-yes-response" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                Are you currently on Medicare?
+            </p>
+            
+            <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="Yes">Yes</button>
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="No">No</button>
+            </div>
+        </div>
+        <!-- if user replies yes it will ask are you medicare ends -->
+        <!-- user response yes -->
+        <!-- user reply 2 if yes -->
+        <div id="user-response-3" class="container mx-auto  w-[20%] flex items-center justify-end my-4">
+            <p class="bg-blue-600 p-3 rounded hidden text-white"></p>
+        </div>
+        <!-- user reply 2 if yes ends -->
+
+        <!-- user response yes ends -->
+        <!-- If user answers yes on medicare -->
+
+        <div id="step-3-yes-response" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                For Medicare: 🎉 Congratulations! 🎁
+            </p>
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                for Medicare: Tap the number button below to call now and eliminate your debt, it only takes 2 minutes.
+            </p>
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                <a href="tel: number" class="p-2 rounded-full text-white bg-blue-600">(888) 544-0239</a>
+            </p>
+            
+            <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="Yes">Yes</button>
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="No">No</button>
+            </div>
+        </div>
+
+        <!-- If user answers yes on medicare ends -->
+
+        <!-- If user answers No on medicare -->
+
+        <div id="step-3-no-response" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                For ACA: 🎉 Congratulations! 🎁
+            </p>
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                for Medicare: Tap the number button below to call now and eliminate your debt, it only takes 2 minutes.
+            </p>
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                <a href="tel: number" class="p-2 rounded-full text-white bg-blue-600">(844) 559-0632</a>
+            </p>
+            
+            <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="Yes">Yes</button>
+                <button class="bg-blue-600 p-2 w-[90px] text-white rounded-full" value="No">No</button>
+            </div>
+        </div>
+
+        <!-- If user answers no on medicare ends -->
+
+        <!-- if user chooses less than 50k - no -->
+        <div id="user-choose-50-no" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                Unfortunately I cannot help you based on the given answers. I will close this chat and when you give us feedback about this chat, you can get $500 Walmart gift card.
+            </p>
+            
+            <p class="bg-gray-200 p-3 rounded hidden font-normal">
+                <a href="tel: number" class="p-2 rounded-full text-white bg-blue-600">Send $500 Gift Card</a>
+            </p>
+            
+        </div>
+
+        <!-- if user chooses less than 50k - no ends -->
 
     </div>
 </body>
