@@ -27,16 +27,13 @@
         <!-- automated message step 1 -->
         <div id="step-1" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2">
             
+            <div class="flex items-center gap-5">
+                <img src="assets/images/agent2.jpg" class="hidden w-[10%] h-[20%] rounded-full" alt="">
+                <p class="bg-gray-200 p-3 rounded hidden font-normal">      
+                    Hi There 👋
+                </p>
+            </div>
             
-            <p class="bg-gray-200 p-3 rounded hidden font-normal">
-                <div id="spinner-1" class="spinner p-3 bg-gray-200 rounded hidden font-normal">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                </div>
-                
-                Hi There 👋
-            </p>
             <p class="bg-gray-200 p-3 rounded hidden font-normal">I'm Evelyn. I'm going to help you to get your debt removed</p>
             <p class="bg-gray-200 p-3 rounded hidden font-normal">In order to help you I need to know if you have more than $10,000 in debt?</p>
             <div class="button-div bg-gray-200 p-3 rounded flex items-center justify-between gap-2 hidden">
@@ -132,7 +129,7 @@
 
         <!-- If user answers No on medicare -->
 
-        <div id="step-3-no-response" class="container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
+        <div id="step-3-no-response" class="p-5 container mx-auto flex flex-col items-start justify-start w-[20%] gap-2" data-step="2">
             <p class="bg-gray-200 p-3 rounded hidden font-normal">
                 For ACA: 🎉 Congratulations! 🎁
             </p>
@@ -165,7 +162,56 @@
 
         <!-- if user chooses less than 50k - no ends -->
 
+        
+
+
+        <div id="chat-close" class="hidden flex items-center justify-center gap-5 container mx-auto w-[20%] my-[4rem]">
+            <div class="h-[1px] w-full bg-gray-300"></div>
+            <div class="text-sm font-normal text-gray-400 text-center w-full">Chat Closed</div>
+            <div class="h-[1px] w-full bg-gray-300"></div>
+        </div>
+
     </div>
+
+    <!-- footer section -->
+    <footer class="bg-gray-200 w-full mt-24">
+        <div class="container max-w-[1280px] mx-auto text-center text-sm text-gray-500 px-4 py-8 sm:p-8 leading-6">
+            <p class="mb-8">
+                IMPORTANT DISCLAIMER: Programs range from 12 to 48 months. Customers who are able to stay in the program and pay off all their debt see savings of approximately 50% before fees, or 30% including program fees, over 24 to 48 months. All claims are based on registered debts. Not all debts are eligible for registration. Not all clients complete the program for various reasons, including their ability to save sufficient funds. Estimates based on previous results, which will vary depending on specific circumstances. The programs do not guarantee that your debts will be reduced by a specific amount or percentage or that you will be debt-free within a specific time period. The programs do not assume consumer debt, make monthly payments to creditors, or provide tax, bankruptcy, accounting, legal advice or credit repair services. Programs are not available in all states and rates may vary by state. Contact a tax professional to discuss the tax consequences of the liquidation. Consult a bankruptcy attorney for more information about bankruptcy. Depending on your state, there may be programs available to recommend a local tax professional and/or bankruptcy attorney. You may be subject to collections or demands by creditors or collectors. Your outstanding debt may increase due to the accumulation of fees and interest. Please read and understand all program materials before enrolling, including the potential adverse impact on credit rating.
+            </p>
+            <p class="mb-8">
+                Certain types of debt are not eligible for enrollment. Some creditors
+                are not eligible to enroll because they do not deal with debt relief
+                companies.
+            </p>
+
+            <p class="text-blue-500">
+                <a
+                  href="https://debtreliefhelpdesk.com/chat/en/pp.html"
+                  target="_blank"
+                >
+                  Privacy Policy
+                </a>
+                <span>|</span>
+                <a
+                  href="https://debtreliefhelpdesk.com/chat/en/tos.html"
+                  target="_blank"
+                >
+                  Terms and Conditions
+                </a>
+                <span>|</span>
+                <a
+                  href="https://debtreliefhelpdesk.com/chat/en/cu.html"
+                  target="_blank"
+                >
+                  Contact Us
+                </a>
+              </p>
+
+        </div>
+
+    </footer>
+    <!-- footer section ends -->
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="assets/js/main.js"></script>

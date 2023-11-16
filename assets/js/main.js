@@ -19,27 +19,23 @@ var buttonValue = ""
 // step 1
 if( currentStep === 1 ) {
 
-    setTimeout(()=>{
-        $("#step-1 > div").eq(0).removeClass("hidden")
-        setTimeout(()=> {
-            $("#step-1 > div").eq(0).addClass("hidden")
-        },600)
-    }, 400)
-
     setTimeout(() => {
-        $("#step-1 > p:first").removeClass("hidden")
         
+        $("#step-1 > div > p:first").removeClass("hidden")
+        $("#step-1 > div > img").removeClass("hidden")
         setTimeout(()=> {
+            $("#step-1 > div > img").addClass("hidden")
             $("#step-1 > p").eq(1).removeClass("hidden")
         }, 1200)
         setTimeout(()=> {
+            $("#step-1 > div > img").addClass("hidden")
             $("#step-1 > p").eq(2).removeClass("hidden")
         }, 1800)
 
         setTimeout(() => {
-            $("#step-1 > div").eq(1).removeClass("hidden")
+            $("#step-1 > div").removeClass("hidden")
         }, 2500)
-    }, 1200)
+    }, 800)
 
     $("#step-1 > div > button").click(function () {
         buttonValue = $(this).val()
@@ -61,6 +57,9 @@ if( currentStep === 1 ) {
                 $("#step-1-yes-response > p").eq(2).removeClass("hidden")
             }, 2000)
             
+            setTimeout(()=> {
+                $("#chat-close").removeClass("hidden")
+            }, 2500)
 
         } else {
             $("#user-response-1 > p").eq(0).removeClass("hidden")
@@ -114,6 +113,9 @@ if( currentStep === 1 ) {
                         setTimeout(()=>{
                             $("#user-choose-50-no > p").eq(1).removeClass("hidden")
                         }, 1200)
+                        setTimeout(()=> {
+                            $("#chat-close").removeClass("hidden")
+                        }, 2000)
                 }, 800)
                 
                 
@@ -135,7 +137,10 @@ if( currentStep === 1 ) {
                         $("#step-3-yes-response > p").eq(1).removeClass("hidden")
                         setTimeout(()=>{
                             $("#step-3-yes-response > p").eq(2).removeClass("hidden")
-                        })
+                        }, 1200)
+                        setTimeout(()=>{
+                            $("#chat-close").removeClass("hidden")
+                        }, 1500)
                     }, 1000)
                 }, 800)
             }
@@ -151,6 +156,9 @@ if( currentStep === 1 ) {
                         setTimeout(()=> {
                             $("#step-3-no-response > p").eq(2).removeClass("hidden")
                         }, 1200)
+                        setTimeout(()=> {
+                            $("#chat-close").removeClass("hidden")
+                        }, 1500)
                     }, 1000)
                 }, 800)
             }
